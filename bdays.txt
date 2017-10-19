@@ -1,0 +1,19 @@
+8
+36 1
+hariharan 1 5 
+131 1
+rama 4 7 
+276 2
+mama 8 28 
+venki 8 28 
+321 1
+jonathaan 10 11 
+343 1
+deepak 11 2 
+325 2
+raghav 10 15 
+akilesh 10 15 
+300 1
+amma 9 21 
+345 1
+priya 11 4 
