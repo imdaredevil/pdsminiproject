@@ -43,11 +43,13 @@ void bdaycheckdisplay(int hashcheck,Heap& current,Heap& all)
 		hashcheck = current.peep();
 		cout<<"            "<<current.peep()%31<<"/"<<current.peep()/31<<" is birthday of          \n";
 	}
-	else
+	else if(all.peep()!=-1)
 	{
 			hashcheck  = all.peep();
 			cout<<"          "<<all.peep()%31<<"/"<<all.peep()/31<<" is birthday of          \n";
 	}
+	else
+		   	cout<<"          "<<"no birthdays stored"<<"                       \n";         
 	hashstore[hashcheck].display();
 }
 
