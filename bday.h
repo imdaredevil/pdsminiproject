@@ -14,6 +14,12 @@ class bdaybaby
 		cout<<setw(40)<<"day: ";
 		cin>>date;
 	}
+	bdaybaby(string na,int mo,int da)
+	{
+		name = na;
+		mon = mo;
+		date = da;
+	}
 	int hashv()
 	{
 		return 31*mon + date;

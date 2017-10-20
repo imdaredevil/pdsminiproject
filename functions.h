@@ -11,11 +11,19 @@ void dele(Heap& hashheap)
 		cin>>s;
 		searchbyname(delelist,s);
 		list<bdaybaby>::iterator it;
+		if(delelist.size()==0)
+		{
+			cout<<"no such name\n";
+			return;
+		}
+		if(delelist.size()>1)
+		{
 		for(it = delelist.begin(); it != delelist.end();it++)
 		{
 			cout<<++i<<" for ";(*it).display();
 		}
 		cin>>i;
+		}
 		for(it = delelist.begin();i>1;i--,it++);
 		int hashe = (*it).hashv();
 		hashstore[hashe].remove(*it);
