@@ -25,7 +25,7 @@ class hashentry: public list<bdaybaby>
 		}
 	}
 }hashstore[400];
-int hash(int mon,int day)
+int hashp(int mon,int day)
 {
 	return 31*mon + day;
 }

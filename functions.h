@@ -2,19 +2,22 @@
 #include<ctime>
 #include<iomanip>
 #include"heap.h"
-void dele(Heap& hashheap)
+bool dele(Heap& hashheap,int flag)
 	{
 		string s;
 		int i=0;
 		list<bdaybaby> delelist;
+		if(flag==0)
 		cout<<"enter name to be deleted\n";
+		else
+		cout<<"enter name to be updated\n";
 		cin>>s;
 		searchbyname(delelist,s);
 		list<bdaybaby>::iterator it;
 		if(delelist.size()==0)
 		{
 			cout<<"no such name\n";
-			return;
+			return false;
 		}
 		if(delelist.size()>1)
 		{
@@ -29,6 +32,7 @@ void dele(Heap& hashheap)
 		hashstore[hashe].remove(*it);
 		if(hashstore[hashe].size()==0)
 			hashheap.dele_ele(hashe);
+		return true;
 	}
 void insert(Heap& hashheap)
 {
@@ -60,6 +64,3 @@ void bdaycheckdisplay(int hashcheck,Heap& current,Heap& all)
 		   	cout<<"          "<<"no birthdays stored"<<"                       \n";         
 	hashstore[hashcheck].display();
 }
-
-	
-	

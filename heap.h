@@ -51,6 +51,13 @@ class Heap
 	ifstream file;
 	file.open("bdays.txt");
 		int isize,j,c;
+	if(!(file))
+	{
+		ofstream fi;
+		fi.open("bdays.txt");
+		fi<<0;
+		fi.close();
+	}
 	file>>j;
 	//cout<<j;
 		for(int i=1;i<=j;i++)

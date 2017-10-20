@@ -9,12 +9,22 @@ int main()
 	hashfile();
 	cout<<"***********************************************************************************************\n";
 	ca:
-	cout<<"1 to insert\n2 to delete\nany other key to exit\n";
+	cout<<"1 to insert\n2 to delete\n3 to update\nany other key to exit\n";
 	cin>>ch;
 	if(ch==1)
 		insert(all);
 	else if(ch==2)
-		dele(all);
+	{
+		if(dele(all,0))
+			cout<<"Deleted";
+	}
+	else if(ch == 3)
+	{
+		if(dele(all,1))
+		{
+			insert(all);
+		}
+	}	
 	else
 		goto la;
 	cout<<"***********************************************************************************************\n";
